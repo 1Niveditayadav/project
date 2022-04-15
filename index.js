@@ -10,9 +10,9 @@ var corsOption = {
 app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.get("/",(req,res)=>{
-    res.json({message:"Welcome !!"});
-})
+// app.get("/",(req,res)=>{
+//     res.json({message:"Welcome !!"});
+// })
 const port = 5000;
 require("./app/routes/user.routes")(app);
 app.listen(port,()=>{
